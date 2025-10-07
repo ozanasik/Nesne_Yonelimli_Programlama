@@ -1,0 +1,48 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Birinci Sayıyı Gir: ");
+        double sayi1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("İkinci Sayıyı Gir: ");
+        double sayi2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Hangi İşlemi İstiyorsan Gir (+, -, *, /): ");
+        char islem = Convert.ToChar(Console.ReadLine());
+
+        double sonuc;
+
+        switch (islem)
+        {
+            case '+':
+                sonuc = sayi1 + sayi2;
+                Console.WriteLine("Sonuç: " + sonuc);
+                break;
+            case '-':
+                sonuc = sayi1 - sayi2;
+                Console.WriteLine("Sonuç: " + sonuc);
+                break;
+            case '*':
+                sonuc = sayi1 * sayi2;
+                Console.WriteLine("Sonuç: " + sonuc);
+                break;
+            case '/':
+                if (sayi2 != 0)
+                {
+                    sonuc = sayi1 / sayi2;
+                    Console.WriteLine("Sonuç: " + sonuc);
+                }
+                else
+                {
+                    Console.WriteLine("Sıfıra Bölünmez");
+                }
+                break;
+            default:
+                Console.WriteLine("Hata");
+                break;
+        }
+    }
+}
