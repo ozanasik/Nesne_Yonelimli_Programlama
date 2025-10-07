@@ -1,0 +1,54 @@
+using System;
+
+public class Program
+{
+    static void Main(string[] args)
+    {
+        EkranaYaz();
+        long ogrenciNo = 24301071044;
+        string isim = "Ozan";
+
+        string metin = SayiDonder(ogrenciNo, isim);
+        Console.WriteLine(metin);
+
+        Console.WriteLine("a sayısını giriniz");
+        int a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("b sayısını giriniz");
+        int b = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("c sayısını giriniz");
+        int c = Convert.ToInt32(Console.ReadLine());
+
+        int toplamSonuc = ToplamaIslemi(a, b);
+        Console.WriteLine("Toplam: " + toplamSonuc);
+
+        int enBuyukSayi = EnBuyukSayi(a, b, c); 
+        Console.WriteLine("En büyük sayı: " + enBuyukSayi);
+    }
+
+    static void EkranaYaz()
+    {
+        Console.WriteLine("Ozan Aşık");
+    }
+
+    static string SayiDonder(long sayi, string isim)
+    {
+        return string.Format("Öğrenci no: {0}, İsim: {1}", sayi, isim);
+    }
+
+    static int ToplamaIslemi(int sayi1, int sayi2)
+    {
+        int toplam = sayi1 + sayi2;
+        return toplam;
+    }
+
+    static int EnBuyukSayi(int sayi1, int sayi2, int sayi3)
+    {
+        int enBuyuk = sayi1; 
+
+        if (sayi2 > enBuyuk)
+            enBuyuk = sayi2;  
+        if (sayi3 > enBuyuk)
+            enBuyuk = sayi3;  
+        return enBuyuk;
+    }
+}
