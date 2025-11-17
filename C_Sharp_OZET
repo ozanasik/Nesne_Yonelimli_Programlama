@@ -1,0 +1,71 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Ozan Asik");
+        string x = "Ozan";
+        Console.WriteLine(x + " 24301071044");
+        int yas = 19;
+        Console.WriteLine(yas);
+        int yeniyas = 30;
+        yas = yeniyas;
+        Console.WriteLine(yas); // yas 30 oldu
+        double ondalikli = 3.14; 
+        bool yasiyormu = true;
+        // const örneğin için not:
+        // const double pi = 3.14; // Bunu buraya yazabilirsin.
+        string isim;
+        Console.Write("Isminizi Giriniz: "); // Write olunca alt satıra geçmez İsminiz: şeklindedir
+        isim = Console.ReadLine(); //Console.ReadLine() boş bir string döndürür
+        Console.WriteLine(isim);
+        Console.WriteLine(isim + " Hosgeldin ");
+        string oyun;
+        Console.Write("Oynadiginiz oyunun ismini giriniz ");
+        oyun = Console.ReadLine();
+        Console.WriteLine(isim + " " + oyun + " " + "Oynuyor "); // Boş tırnak arasına boşluk koydurtuyor.
+        /* int sayi = 48 ;
+        string yenisayi = Convert.ToString(sayi); Convert ile int değerden string değerine çevirdi. */
+        double a = 10;
+        double b = 3;
+        Console.WriteLine(a - b);
+        Console.WriteLine(a + b);
+        Console.WriteLine(a * b);
+        Console.WriteLine(a / b);
+        Console.WriteLine(a % b); // a/b den kalanı verir.
+        a = a+10; // a sayısı 10 artar
+        Console.WriteLine(++a); // başına ++ gelirse direkt 1 artar. ++ sonra gelirse bundan sonraki zaman için a sayısı 1 artmış olur.
+        Console.WriteLine("1.Sayiyi Giriniz ");
+        int bolme1 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("2. Sayiyi Giriniz ");
+        int bolme2 = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Kalan Sayi "+bolme1%bolme2); // Kalanı yazar.
+        bool sinav = true;
+        if (sinav == true){
+        Console.WriteLine("Sinavdan Gectin");  
+             }
+        else{
+            Console.WriteLine("Sinavdan Kaldin");
+        }
+        Console.Write("Yasinizi Giriniz: ");
+        int yass = Convert.ToInt32(Console.ReadLine());
+        if (yass >= 18) {
+            Console.WriteLine("Resitsin");
+        }
+        else if (yass <=0){
+            Console.WriteLine("Yanlis Deger");
+        }
+        else {
+            Console.WriteLine("Resit Degilsin");
+        }
+        int sayidongu = 1;
+        while (sayidongu >0) // 0 dan büyük olduğu sürece sonsuz şekilde 1 artarak çalışır.
+        {
+            Console.Write(sayidongu);
+            sayidongu++;
+        }
+        
+    }
+    
+}
